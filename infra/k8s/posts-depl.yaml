@@ -14,5 +14,5 @@ spec:
     spec:
       containers:
         - name: posts
-          image: thaparoyal/posts:0.0.1
+          image: thaparoyal/posts:0.0.5
           imagePullPolicy: Never

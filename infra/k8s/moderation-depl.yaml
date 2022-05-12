@@ -1,31 +1,30 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: moderations-depl
+  name: moderation-depl
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: moderations
+      app: moderation
   template:
     metadata:
       labels:
-        app: moderations
+        app: moderation
     spec:
       containers:
-        - name: moderations
-          image: thaparoyal/moderations
-          imagePullPolicy: Never
+        - name: moderation
+          image: thaparoyal/moderation
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: moderations-srv
+  name: moderation-srv
 spec:
   selector:
-    app: moderations
+    app: moderation
   ports:
-    - name: moderations
+    - name: moderation
       protocol: TCP
       port: 4003
       targetPort: 4003

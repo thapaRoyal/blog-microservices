@@ -15,7 +15,6 @@ spec:
       containers:
         - name: query
           image: thaparoyal/query
-          imagePullPolicy: Never
 ---
 apiVersion: v1
 kind: Service

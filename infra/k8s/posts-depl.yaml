@@ -15,12 +15,11 @@ spec:
       containers:
         - name: posts
           image: thaparoyal/posts
-          imagePullPolicy: Never
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: post-clusterip-srv
+  name: posts-clusterip-srv
 spec:
   selector:
     app: posts

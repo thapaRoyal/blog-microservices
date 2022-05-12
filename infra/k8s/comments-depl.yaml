@@ -15,7 +15,6 @@ spec:
       containers:
         - name: comments
           image: thaparoyal/comments
-          imagePullPolicy: Never
 ---
 apiVersion: v1
 kind: Service
